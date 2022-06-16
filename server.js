@@ -10,6 +10,10 @@ const io =  socketio(server);
 
 io.on('connection', (socket) => {
     console.log('connected with socket id = ', socket.id);
+    socket.on('boom', () => {
+        console.log('boom recieved on ', socket.id);
+    })
+
 })
 app.use('/', express.static(__dirname + '/public'));
 

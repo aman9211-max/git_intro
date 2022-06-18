@@ -5,13 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script  src="/socket.io/socket.io.js"></script>
-    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script defer src="script.js"></script>
 </head>
 <body>
 
     <h1>SOCKET.IO SAMPLE</h1>
-    <button id="boom">Ping</button>
-    
+    <div id="loginBox">
+        <input type="text" id="inpUserName" placeholder="Username">
+        <input type="password" id="inpPass" placeholder="password">
+        <button id="btnEnter">Enter</button>
+    </div>
+
+    <div id="chatBox">
+        <input type="text" id="inpToUser" placeholder="Send to (default everyone) ">
+        <input type="text" id="inpNewMsg" placeholder="Write a message...">
+        <button id="btnSendMsg">Send</button>
+        <ul id="ulMsgs"></ul>
+    </div>
 </body>
 </html>
